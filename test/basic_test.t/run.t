@@ -13,16 +13,16 @@ No arguments
   
   usage: hfsp <method: overall|pair> <search_out.tsv> > out.tsv
   
-  "Best" means hit with highest bit score.  HFSP is only calculated on 
+  "Best" means hit with highest bit score.  HFSP is only calculated on
     "best" hits.  overall|pair controls which "best" hits to report.
   
-  overall -- Only one score is printed per query.  It is the score to 
-    the best target. 
+  overall -- Only one score is printed per query.  It is the score to
+    the best target.
   
-  pair -- One score is printed for each query-target pair.  It is the 
+  pair -- One score is printed for each query-target pair.  It is the
     best score for each query-target pair.
   
-  Don't forget to run mmseqs2 with 
+  Don't forget to run mmseqs2 with
     --format-output query,target,fident,bits,cigar
   
 
@@ -38,16 +38,16 @@ One argument
   
   usage: hfsp <method: overall|pair> <search_out.tsv> > out.tsv
   
-  "Best" means hit with highest bit score.  HFSP is only calculated on 
+  "Best" means hit with highest bit score.  HFSP is only calculated on
     "best" hits.  overall|pair controls which "best" hits to report.
   
-  overall -- Only one score is printed per query.  It is the score to 
-    the best target. 
+  overall -- Only one score is printed per query.  It is the score to
+    the best target.
   
-  pair -- One score is printed for each query-target pair.  It is the 
+  pair -- One score is printed for each query-target pair.  It is the
     best score for each query-target pair.
   
-  Don't forget to run mmseqs2 with 
+  Don't forget to run mmseqs2 with
     --format-output query,target,fident,bits,cigar
   
 
