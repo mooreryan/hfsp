@@ -1,0 +1,6 @@
+(library
+ (name hfsp)
+ (libraries base bio_io re2 stdio)
+ (instrumentation
+  (backend bisect_ppx))
+ (preprocess (pps ppx_jane)))

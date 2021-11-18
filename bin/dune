@@ -1,0 +1,8 @@
+(executable
+ (public_name hfsp)
+ (name main)
+ (modules main)
+ (libraries base bio_io hfsp re2 stdio)
+ (instrumentation
+  (backend bisect_ppx))
+ (preprocess (pps ppx_getenv ppx_const ppx_jane)))
