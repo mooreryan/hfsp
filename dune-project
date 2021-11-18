@@ -19,6 +19,7 @@
   ;; Note: these versions can be lowered
   (base (>= v0.14))
   (bio_io (>= 0.3))
+  (bisect_ppx (>= 2.6))
   (ppx_const (>= 2.0))
   (ppx_getenv (>= 2.1))
   (ppx_jane (>= v0.14))
@@ -26,5 +27,4 @@
   (stdio (>= v0.14))
   ;; Test deps
   (ppx_inline_test (and (>= v0.14) :with-test))
-  (ppx_expect (and (>= v0.14) :with-test))
-  ))
+  (ppx_expect (and (>= v0.14) :with-test))))
