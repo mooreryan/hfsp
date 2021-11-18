@@ -5,11 +5,7 @@ let abort ?(exit_code = 1) msg =
   let () = Stdio.eprintf "%s\n" msg in
   Caml.exit exit_code
 
-let version =
-  let base = "0.1.0" in
-  match%const [%getenv "GIT_COMMIT_HASH"] with
-  | "" -> base
-  | x -> base ^ "-" ^ x
+let version = match%const [%getenv "GIT_COMMIT_HASH"] with "" -> "na" | x -> x
 
 let usage_msg =
   {eof|usage: hfsp <method: overall|pair> <search_out.tsv> > out.tsv
