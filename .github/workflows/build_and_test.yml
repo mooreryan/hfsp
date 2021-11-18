@@ -68,7 +68,7 @@ jobs:
         if: matrix.os == 'macos-latest'
 
       - run: opam exec -- make send_coverage
-        if: matrix.ocaml-compiler == '4.12.0'
+        if: matrix.os == 'ubuntu-latest'
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

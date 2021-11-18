@@ -62,3 +62,7 @@ test_coverage:
 .PHONY: test_coverage_open
 test_coverage_open: test_coverage
 	$(BROWSER) _coverage/index.html
+
+.PHONY: send_coverage
+send_coverage: test_coverage
+	bisect-ppx-report send-to Coveralls --coverage-path $(TEST_COV_D)
