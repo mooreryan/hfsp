@@ -9,10 +9,20 @@ build:
 	GIT_COMMIT_HASH=`git describe --always --dirty` \
 	  dune build
 
+.PHONY: build_mac
+build_mac:
+	GIT_COMMIT_HASH=`git describe --always --dirty` \
+	  dune build -j 1
+
 .PHONY: build_release
 build_release:
 	GIT_COMMIT_HASH=`git describe --always --dirty` \
 	  dune build --profile=release
+
+.PHONY: build_release_mac
+build_release_mac:
+	GIT_COMMIT_HASH=`git describe --always --dirty` \
+	  dune build -j 1 --profile=release
 
 .PHONY: check
 check:
@@ -27,9 +37,18 @@ install:
 	GIT_COMMIT_HASH=`git describe --always --dirty` \
 	  dune install --profile=release
 
+.PHONY: install_mac
+install_mac:
+	GIT_COMMIT_HASH=`git describe --always --dirty` \
+	  dune install -j 1 --profile=release
+
 .PHONY: test
 test:
 	dune test
+
+.PHONY: test_mac
+test_mac:
+	dune test -j 1
 
 .PHONY: test_coverage
 test_coverage:
