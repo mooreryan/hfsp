@@ -6,23 +6,19 @@ all: clean build_release install
 
 .PHONY: build
 build:
-	GIT_COMMIT_HASH=`git describe --always --dirty` \
-	  dune build
+	dune build
 
 .PHONY: build_mac
 build_mac:
-	GIT_COMMIT_HASH=`git describe --always --dirty` \
-	  dune build -j 1
+	dune build -j 1
 
 .PHONY: build_release
 build_release:
-	GIT_COMMIT_HASH=`git describe --always --dirty` \
-	  dune build --profile=release
+	dune build --profile=release
 
 .PHONY: build_release_mac
 build_release_mac:
-	GIT_COMMIT_HASH=`git describe --always --dirty` \
-	  dune build -j 1 --profile=release
+	dune build -j 1 --profile=release
 
 .PHONY: check
 check:
@@ -34,13 +30,11 @@ clean:
 
 .PHONY: install
 install:
-	GIT_COMMIT_HASH=`git describe --always --dirty` \
-	  dune install --profile=release
+	dune install --profile=release
 
 .PHONY: install_mac
 install_mac:
-	GIT_COMMIT_HASH=`git describe --always --dirty` \
-	  dune install -j 1 --profile=release
+	dune install -j 1 --profile=release
 
 .PHONY: test
 test:
