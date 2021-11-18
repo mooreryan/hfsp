@@ -10,16 +10,16 @@ let version = match%const [%getenv "GIT_COMMIT_HASH"] with "" -> "na" | x -> x
 let usage_msg =
   {eof|usage: hfsp <method: overall|pair> <search_out.tsv> > out.tsv
 
-"Best" means hit with highest bit score.  HFSP is only calculated on 
+"Best" means hit with highest bit score.  HFSP is only calculated on
   "best" hits.  overall|pair controls which "best" hits to report.
 
-overall -- Only one score is printed per query.  It is the score to 
-  the best target. 
+overall -- Only one score is printed per query.  It is the score to
+  the best target.
 
-pair -- One score is printed for each query-target pair.  It is the 
+pair -- One score is printed for each query-target pair.  It is the
   best score for each query-target pair.
 
-Don't forget to run mmseqs2 with 
+Don't forget to run mmseqs2 with
   --format-output query,target,fident,bits,cigar
 |eof}
 
@@ -42,7 +42,7 @@ let main () =
   let method_, infile =
     match parse_args () with
     | Ok (m, i) -> (m, i)
-    | Error err -> abort @@ "ERROR: " ^ Error.to_string_hum err
+    | Error err -> abort ("ERROR: " ^ Error.to_string_hum err)
   in
   Lib.run method_ infile
 
