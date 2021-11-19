@@ -6,7 +6,7 @@
 
 (package
  (name hfsp)
- (version 0.1.0)
+ (version 0.1.1)
  (license "MIT")
  (maintainers "Ryan M. Moore")
  (authors "Ryan M. Moore")

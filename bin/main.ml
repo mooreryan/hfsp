@@ -5,7 +5,7 @@ let abort ?(exit_code = 1) msg =
   let () = Stdio.eprintf "%s\n" msg in
   Caml.exit exit_code
 
-let version = "0.1.0"
+let version = "0.1.1"
 
 let usage_msg =
   {eof|usage: hfsp <method: overall|pair> <search_out.tsv> > out.tsv
