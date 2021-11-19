@@ -13,14 +13,12 @@ depends: [
   "dune" {>= "2.8"}
   "base" {>= "v0.14"}
   "bio_io" {>= "0.3"}
-  "bisect_ppx" {>= "2.6"}
-  "ppx_const" {>= "2.0"}
-  "ppx_getenv" {>= "2.1"}
   "ppx_jane" {>= "v0.14"}
   "re2" {>= "v0.14"}
   "stdio" {>= "v0.14"}
   "ppx_inline_test" {>= "v0.14" & with-test}
   "ppx_expect" {>= "v0.14" & with-test}
+  "bisect_ppx" {>= "2.6" & dev}
   "odoc" {with-doc}
 ]
 build: [
