@@ -30,11 +30,11 @@ clean:
 	dune clean
 
 .PHONY: install
-install:
+install: build_release
 	dune install -p $(NAME)
 
 .PHONY: install_mac
-install_mac:
+install_mac: build_release_mac
 	dune install -p $(NAME) -j 1
 
 .PHONY: test

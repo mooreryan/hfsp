@@ -9,6 +9,9 @@ on:
     branches:
       - '*'
 
+env:
+  PROGRAM_NAME: hfsp
+
 jobs:
   build:
     strategy:
@@ -69,5 +72,5 @@ jobs:
       - name: Upload the build artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ matrix.os }}-${{ matrix.ocaml-compiler }}-hfsp
-          path: _build/install/default/bin/hfsp
+          name: ${{ matrix.os }}-${{ matrix.ocaml-compiler }}-${{ env.PROGRAM_NAME }}
+          path: _build/install/default/bin/${{ env.PROGRAM_NAME }}
