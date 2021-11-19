@@ -1,4 +1,5 @@
 BROWSER = firefox
+NAME = hfsp
 TEST_COV_D = /tmp/hfsp
 
 .PHONY: all
@@ -14,11 +15,11 @@ build_mac:
 
 .PHONY: build_release
 build_release:
-	dune build --profile=release
+	dune build -p $(NAME)
 
 .PHONY: build_release_mac
 build_release_mac:
-	dune build -j 1 --profile=release
+	dune build -p $(NAME) -j 1
 
 .PHONY: check
 check:
@@ -30,11 +31,11 @@ clean:
 
 .PHONY: install
 install:
-	dune install --profile=release
+	dune install -p $(NAME)
 
 .PHONY: install_mac
 install_mac:
-	dune install -j 1 --profile=release
+	dune install -p $(NAME) -j 1
 
 .PHONY: test
 test:
